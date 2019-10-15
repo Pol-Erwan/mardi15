@@ -153,11 +153,15 @@ while player1.life_points > 0 && (player2.life_points > 0 || player3.life_points
   sleep (2)
     if player2.life_points > 0  
       player2.attacks(player1)
+    else 
+      puts "#{player2.name} est mort"
     end
   puts " "
   sleep (2)
     if player3.life_points > 0
       player3.attacks(player1)
+    else 
+      puts "#{player3.name} est mort"
     end
   puts " "
   
