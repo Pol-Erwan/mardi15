@@ -151,17 +151,17 @@ while player1.life_points > 0 && (player2.life_points > 0 || player3.life_points
   puts "Les autres joueurs t'attaquent !"		# au tour des ennemis de m'attaquer
   puts " "
   sleep (2)
-    if player2.life_points > 0  
+    if player2.life_points > 0 				# au tour du player 2 de jouer si il est en vie 
       player2.attacks(player1)
     else 
-      puts "#{player2.name} est mort"
+      puts "#{player2.name} est mort"			# sinon afficher qu'il est mort	
     end
   puts " "
-  sleep (2)
+  sleep (2)						# au tour du player 3 de jouer si il est en vie
     if player3.life_points > 0
       player3.attacks(player1)
     else 
-      puts "#{player3.name} est mort"
+      puts "#{player3.name} est mort"			# sinon affcher qu'il est mort
     end
   puts " "
   
