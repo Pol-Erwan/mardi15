@@ -148,7 +148,7 @@ while player1.life_points > 0 && (player2.life_points > 0 || player3.life_points
     puts " "
   end
 
-  puts "Les autres joueurs t'attaquent !"
+  puts "Les autres joueurs t'attaquent !"		# au tour des ennemis de m'attaquer
   puts " "
   sleep (2)
     if player2.life_points > 0  
@@ -160,21 +160,7 @@ while player1.life_points > 0 && (player2.life_points > 0 || player3.life_points
       player3.attacks(player1)
     end
   puts " "
-
-  #puts "tableau attack"
-  #puts enemies
-  #bot = 1
-  #while bot =< enemies.size
-    #enemies.each do |bot|
-      #puts bot
-      #bot.attacks(player1)
-    #end
-  #end
-  #player2.attacks(player1)
-  #enemies.attacks(player1)
-
   
-
 sleep (1)
 end
 

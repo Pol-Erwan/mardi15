@@ -5,23 +5,23 @@ Bundler.require
 require_relative 'lib/game'
 require_relative 'lib/player'
 
-player1 = Player.new("Sangoku")
-player2 = Player.new("Végéta")
+player1 = Player.new("Sangoku") 			# declaration ennemi 1
+player2 = Player.new("Végéta")				# déclaration ennemi 2	
 
 puts "Voici l'état de chaque joueur :"
 
 
-print player1.show_state
-print player2.show_state
+print player1.show_state				# etat joueur 1
+print player2.show_state				# etat joueur 2
 
 
-puts "Passons à la phase d'attaque :"
+puts "Passons à la phase d'attaque :"			# phase attaque	
 puts "        FIGHT"
 
 
-while player1.life_points >= 1 && player2.life_points >= 1
+while player1.life_points >= 1 && player2.life_points >= 1	# si joueur en vie le combat commence
 
-	sleep (0.5)
+	sleep (0.5)					# tempo
 	print "        ."
 	sleep (0.5)
 	print " ."
@@ -29,8 +29,8 @@ while player1.life_points >= 1 && player2.life_points >= 1
 	print " ."
 	puts " "
 
-  player1.attacks(player2)
-if player2.life_points <= 0
+  player1.attacks(player2)				# premiere attaque
+if player2.life_points <= 0				# si adversaire mort = fin du jeu
 	break
 	end
 
@@ -48,4 +48,4 @@ end
 puts "-------->Game Over<---------"
 
 
-binding.pry
+
