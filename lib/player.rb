@@ -1,5 +1,3 @@
-require 'pry'
-
 class Player
   attr_accessor :name, :life_points, :damage
 
@@ -11,7 +9,7 @@ class Player
   end
 
   def show_state
-    puts "-> #{self.name} a #{self.life_points} points de vie."  
+    puts "#{self.name} a #{self.life_points} points de vie."  
   end
 
   def gets_damage(damage)
@@ -26,7 +24,7 @@ class Player
   def attacks(player)
     puts "#{self.name} attaque #{player.name}"
     damage = compute_damage
-    puts "il lui inflige #{damage} points de dommage"
+    puts "-- > il lui inflige #{damage} points de dommage"
     player.gets_damage(damage) 
   end
 
@@ -70,7 +68,6 @@ attr_accessor :weapon_level
 
   def search_health_pack
     health_find = rand(1..6)
-	puts health_find
     if health_find == 1
 	puts "Tu n'as rien trouvé ... "
     else
@@ -90,6 +87,6 @@ attr_accessor :weapon_level
     end
   end
 end
-binding.pry
+
 
 
